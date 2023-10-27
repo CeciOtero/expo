@@ -130,10 +130,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Card(
       shape: const StadiumBorder(),
       margin: const EdgeInsets.symmetric(
-        horizontal: 20,
+        horizontal: 50,
       ),
       clipBehavior: Clip.antiAlias,
-      elevation: 1,
+      elevation: 5,
       child: ListTile(
         onTap: onTap,
         leading: CircleAvatar(
