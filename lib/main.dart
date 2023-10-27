@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Alert Demo',
+      title: ' Manejo de alertas o mensajes',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: const MyHomePage(),
     );
@@ -37,13 +37,13 @@ class _MyHomePageState extends State<MyHomePage> {
         QuickAlert.show(
           context: context,
           type: QuickAlertType.success,
-          text: 'Transaction Completed Successfully!',
-          autoCloseDuration: const Duration(seconds: 2),
+          text: 'Transaccion completada exitosamente!',
+          autoCloseDuration: const Duration(seconds: 5),
           showConfirmBtn: false,
         );
       },
-      title: 'Success',
-      text: 'Transaction Completed Successfully!',
+      title: 'Squickalert',
+      text: 'Squickalert de mensaje correcto',
       leadingImage: 'assets/success.gif',
     );
 
@@ -52,15 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
         QuickAlert.show(
           context: context,
           type: QuickAlertType.error,
-          title: 'Oops...',
-          text: 'Sorry, something went wrong',
+          title: 'Error',
+          text: 'Algo salio mal ',
           backgroundColor: Colors.red,
           titleColor: Colors.white,
           textColor: Colors.white,
         );
       },
-      title: 'Error',
-      text: 'Sorry, something went wrong',
+      title: 'Squickalert',
+      text: 'Un squickalert de error',
       leadingImage: 'assets/error.gif',
     );
 
@@ -68,13 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
       onTap: () {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('This is a SnackBar!'),
-            duration: Duration(seconds: 2),
+            content: Text('Mensajes de notificación!'),
+            duration: Duration(seconds: 4),
           ),
         );
       },
-      title: 'Show SnackBar',
-      text: 'Show a SnackBar',
+      title: 'SnackBar',
+      text: 'Notificación de SnackBar',
       leadingImage: 'assets/snackbar.gif',
     );
 
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Fluttertoast.
         showToast(
           msg: 'This is a toast message!',
-          backgroundColor: Colors.grey,
+          backgroundColor: Color.fromARGB(255, 2, 1, 19),
           textColor: Colors.white,
           fontSize: 16.0,
         );
@@ -94,19 +94,21 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.cyan.shade50,
       appBar: AppBar(
         elevation: 1,
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.cyan,
         title: Text(
-          "Alert Demo",
+
+          " Manejo de alertas o mensajes. Como por ejemplo con quickalert, SnackBar y toast",
           style: Theme.of(context).textTheme.titleMedium,
-        ),
+          
+         ),
       ),
       body: ListView(
         children: [
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           successAlert,
           const SizedBox(height: 20),
           errorAlert,
