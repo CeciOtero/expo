@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         elevation: 1,
         centerTitle: true,
-        backgroundColor: Colors.cyan,
+        backgroundColor: Color.fromARGB(255, 175, 62, 250),
         title: Text(
 
           " Manejo de alertas o mensajes. Como por ejemplo con quickalert, SnackBar y toast",
@@ -110,11 +110,11 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           const SizedBox(height: 30),
           successAlert,
-          const SizedBox(height: 20),
+          const SizedBox(height: 40),
           errorAlert,
-          const SizedBox(height: 20),
+          const SizedBox(height: 40),
           showSnackBar,
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           showToast,
         ],
       ),
