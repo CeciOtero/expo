@@ -82,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
       onTap: () {
         Fluttertoast.
         showToast(
-          msg: 'This is a toast message!',
+          msg: ' mensaje de toast!',
           backgroundColor: Color.fromARGB(255, 2, 1, 19),
           textColor: Colors.white,
           fontSize: 16.0,
         );
       },
-      title: 'Show Toast',
-      text: 'Show a toast message',
+      title: 'Toast',
+      text: 'Mensaje de  toast',
       leadingImage: 'assets/toast.gif',
     );
 
